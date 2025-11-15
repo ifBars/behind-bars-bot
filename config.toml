@@ -25,6 +25,7 @@ plugin = "advanced"
 
 [router]
 plugin = "default"
+default_backend = "google"
 
 # Validators and post_processors default to empty lists
 validators = []
