@@ -1,0 +1,24 @@
+# AccuralAI Configuration for Behind Bars Discord Bot
+[backends.google]
+plugin_id = "accuralai-google"
+options = { api_key = "${GOOGLE_GENAI_API_KEY}", model = "gemini-2.5-flash-lite" }
+
+[cache]
+plugin_id = "accuralai-cache-layered"
+options = { memory_max_size = 100, disk_path = "behind-bars-bot-cache.db" }
+
+[canonicalizer]
+plugin_id = "accuralai-canonicalize-standard"
+
+[router]
+plugin_id = "accuralai-router-default"
+
+[validator]
+plugin_id = "accuralai-validator-noop"
+
+[post_processor]
+plugin_id = "accuralai-post-processor-noop"
+
+[instrumentation]
+type = "logging"
+

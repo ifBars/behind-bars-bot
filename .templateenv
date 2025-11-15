@@ -1,0 +1,55 @@
+# Behind Bars Discord Bot - Environment Variables Template
+# Copy this file to .env and fill in your values
+# DO NOT commit .env to version control!
+
+# ============================================================================
+# REQUIRED - Discord Bot Token
+# ============================================================================
+# Get your bot token from https://discord.com/developers/applications
+BEHIND_BARS_DISCORD_TOKEN=your_discord_bot_token_here
+
+# ============================================================================
+# OPTIONAL - Bot Configuration
+# ============================================================================
+# Path to AccuralAI config file (defaults to config.toml in package directory)
+BEHIND_BARS_CONFIG_PATH=config.toml
+
+# Path to knowledge directory (defaults to knowledge/ in package directory)
+BEHIND_BARS_KNOWLEDGE_PATH=
+
+# Conversation scope: per-channel, per-user, per-thread, per-channel-user
+# Default: per-channel
+BEHIND_BARS_SCOPE=per-channel
+
+# Guild IDs for slash command syncing (comma-separated, optional)
+# Guild commands sync instantly, global commands can take up to 1 hour
+# Example: BEHIND_BARS_SYNC_GUILDS=123456789012345678,987654321098765432
+# Leave empty for global commands (slower sync)
+BEHIND_BARS_SYNC_GUILDS=
+
+# Enable debug logging: true or false
+# Default: false
+BEHIND_BARS_DEBUG=false
+
+# Disable embeddings to avoid rate limits (uses keyword search instead)
+# Set to true if you're hitting API rate limits
+# Default: false (embeddings enabled)
+BEHIND_BARS_DISABLE_EMBEDDINGS=false
+
+# ============================================================================
+# REQUIRED - Backend API Keys
+# ============================================================================
+# Google Gemini API key (required if using Google Gemini backend)
+# Get your key from https://aistudio.google.com/app/apikey
+GOOGLE_GENAI_API_KEY=your_google_genai_api_key_here
+
+# ============================================================================
+# LEGACY - Backward Compatibility (not recommended for multi-bot deployments)
+# ============================================================================
+# These are fallback variables if BEHIND_BARS_* versions are not set
+# Use BEHIND_BARS_* prefixed variables instead to avoid conflicts
+# DISCORD_BOT_TOKEN=
+# ACCURALAI_CONFIG_PATH=
+# DISCORD_BOT_SCOPE=
+# DISCORD_DEBUG=
+
