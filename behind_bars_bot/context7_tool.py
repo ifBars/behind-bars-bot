@@ -28,7 +28,7 @@ class Context7Search:
 
     def __init__(
         self,
-        embedding_model: str = "BAAI/bge-large-en-v1.5",
+        embedding_model: str = "BAAI/bge-small-en-v1.5",
         chunk_size: int = 2000,
         chunk_overlap: int = 300,
     ):

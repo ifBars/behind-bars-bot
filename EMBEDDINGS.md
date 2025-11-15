@@ -6,7 +6,7 @@ Behind Bars now relies on the `accuralai-rag` package for semantic search. The r
 
 ## How accuralai-rag Handles Embeddings
 
-- **Local models by default** – If `sentence-transformers` is available the retriever loads `BAAI/bge-large-en-v1.5`. When that dependency is missing it falls back to a lightweight hashed representation so the bot can still run on minimal installs.
+- **Local models by default** – If `sentence-transformers` is available the retriever loads `BAAI/bge-small-en-v1.5` (a smaller, faster model suitable for VMs). When that dependency is missing it falls back to a lightweight hashed representation so the bot can still run on minimal installs.
 - **Automatic sparse metadata** – Keyword weights are produced next to the dense vectors, enabling BM25-style retrieval without additional configuration.
 - **In-memory caching** – All vectors live in memory for the process lifetime. Restarting the bot simply re-encodes the documents, which usually takes a few seconds because everything is computed locally.
 

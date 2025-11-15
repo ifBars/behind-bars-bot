@@ -27,7 +27,7 @@ class KnowledgeBase:
         knowledge_path: str | Path,
         use_embeddings: bool = True,
         embedding_api_key: Optional[str] = None,  # Deprecated: retained for compatibility
-        embedding_model: str = "BAAI/bge-large-en-v1.5",
+        embedding_model: str = "BAAI/bge-small-en-v1.5",
         embedding_cache_path: Optional[str | Path] = None,  # Deprecated cache hint
         chunk_size: int = 2000,
         chunk_overlap: int = 300,
